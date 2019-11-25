@@ -8,11 +8,13 @@ const reducer = (state, action) => {
     case SET_SEARCH_VALUE:
       return { ...state, searchValue: action.searchValue }
     case SUBMIT_SEARCH:
+ 
       return {
         ...state, 
         loading: action.loading,
         errorMessage: action.errorMessage,
-        repos: action.repos
+        repos: action.repos,
+        currentPageNo: action.currentPageNo
       }
     case SET_REPOS:
       let repos = state.repos.concat(action.res)
