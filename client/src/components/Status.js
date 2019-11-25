@@ -1,4 +1,5 @@
 import React from "react";
+// when loading ,show rotating image to indicate
 export default function Status(props) {
   return <main className="repo__card-status">
   <img

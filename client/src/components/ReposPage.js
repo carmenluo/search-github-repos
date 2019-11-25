@@ -28,6 +28,7 @@ const ReposPage = (props) => {
   })
   return (
     <div>
+      {/* showing page bar for users to select */}
       {props.repos.length > 0 &&
         <div className='repo__navpage'>
           <div className='repo__navpage-sum'>{props.userName}: {props.repos.length} repos found</div>
@@ -37,6 +38,7 @@ const ReposPage = (props) => {
           </div>
         </div>
       }
+      {/* showing actual repos infos */}
       <div className='repos'>
         {repos}
       </div>
