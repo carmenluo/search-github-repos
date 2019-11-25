@@ -1,22 +1,87 @@
-.App {
-  text-align: center;
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+body {
+  background-color: burlywood;
+  height:100%
+}
+.container {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
+.search {
+  text-align:center;
+  &__heading {
+  font-size: 30px;
+  padding: 16px 0;
+  color: #352e2e;
+  }
+  &__lable{
+    width: 50%;
+    height: 1rem;
+  }
 }
+.repos__container {
+  .errorMessage {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .repo__card-status {
+    text-align: center;
+    padding-top: 2rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .repo__status-image {
+    color: gray;
+    margin-right: 2rem;
+    animation: rotate 1s linear infinite;
+  }
+}
+.repo__navpage {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  &-sum {
+    padding: 1rem 2rem;
+    font-size: 2rem;
+  }
+  &-pages {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+  }
+  &-page {
+    display: flex;
+    li {
+      list-style-type: none;
+      padding:1em
+    }
+  }
 }
-
-.App-link {
-  color: #09d3ac;
+.repos{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  .repo{
+    &__card {
+      width: 15rem;
+      min-height: 8rem;
+      background: white;
+      padding: 1rem;
+      margin: 1rem;
+      text-align: center;
+      border: solid 1px;
+      div {
+        padding-top: 1rem;
+      }
+    }
+      
+}
+}
 }
