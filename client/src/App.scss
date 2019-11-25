@@ -50,11 +50,9 @@ body {
   align-items: center;
   &-sum {
     padding: 1rem 2rem;
-    font-size: 2rem;
   }
   &-pages {
     padding: 1rem 2rem;
-    font-size: 1.5rem;
   }
   &-page {
     display: flex;
@@ -70,11 +68,10 @@ body {
   width: 100%;
   .repo{
     &__card {
-      width: 15rem;
       min-height: 8rem;
       background: white;
       padding: 1rem;
-      margin: 1rem;
+      margin: 2%;
       text-align: center;
       border: solid 1px;
       div {
@@ -84,4 +81,72 @@ body {
       
 }
 }
+}
+@media screen and (min-width: 916px) {
+  .repo__card {
+    width: 25%;
+  }
+  .search__heading {
+    font-size: 2rem;
+  }
+  .repo__navpage {
+    &-sum {
+      font-size: 2rem;
+    }
+    &-pages {
+      font-size: 1.5rem;
+    }
+  }
+}
+@media screen and (min-width: 694px) and (max-width: 915px) {
+  .repo__card {
+    width: 40%;
+  }
+  .search__heading {
+    font-size: 2rem;
+  }
+  .repo__navpage {
+    &-sum {
+      font-size: 2rem;
+    }
+    &-pages {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 652px) and (max-width: 693px) {
+  .repo__card {
+    width: 40%;
+  }
+  .search__heading {
+    font-size: 1.5rem;
+  }
+  .repo__navpage {
+    &-sum {
+      font-size: 1.5rem;
+    }
+    &-pages {
+      font-size: 1rem;
+    }
+  }
+}
+
+
+@media screen and (max-width: 651px) {
+  .repo__card {
+    width: 100%;
+    margin: auto;
+  }
+  .search__heading {
+    font-size: 1.5rem;
+  }
+  .repo__navpage {
+    &-sum {
+      font-size: 1.5rem;
+    }
+    &-pages {
+      font-size: 1rem;
+    }
+  }
 }
