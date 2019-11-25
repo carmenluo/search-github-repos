@@ -1,7 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Demo
-![Search Demo](link-to-image)
+![Search Demo](https://github.com/carmenluo/search-github-repos/blob/master/client/public/images/search-github-repos-search.gif)
+![Error message](https://github.com/carmenluo/search-github-repos/blob/master/client/public/images/error_message.png)
+![Responsive](https://github.com/carmenluo/search-github-repos/blob/master/client/public/images/responsive.gif)
 ## Setup
 Seperating code into client folder to maintain structures
 In the project directory, you can run:
