@@ -1,4 +1,3 @@
-import axios from 'axios'
 const SET_SEARCH_VALUE = 'SET_SEARCH_VALUE';
 const SUBMIT_SEARCH = 'SUBMIT_SEARCH';
 const SET_REPOS = 'SET_REPOS';
@@ -15,10 +14,12 @@ const reducer = (state, action) => {
         errorMessage: action.errorMessage
       }
     case SET_REPOS:
+      let repos = state.repos.concat(action.res)
       return {
         ...state, 
         loading: action.loading,
-        repos: action.res, 
+        repos: repos,
+        userName: action.userName,
         searchValue: ''
       }
     case SET_ERROR_MESSAGE:

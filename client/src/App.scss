@@ -58,9 +58,10 @@ body {
   }
   &-page {
     display: flex;
+    flex-wrap: wrap;
     li {
       list-style-type: none;
-      padding:1em
+      padding:0.5em
     }
   }
 }

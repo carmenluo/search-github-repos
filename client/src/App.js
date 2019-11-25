@@ -27,6 +27,7 @@ function App() {
               currentRepos={state.currentRepos}
               currentPageNo={state.currentPageNo}
               setPage={setPage}
+              userName={state.userName}
             ></ReposPage>
           )}
     </div>
