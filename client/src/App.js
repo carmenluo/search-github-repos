@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.scss';
-import Search from './Search';
-import Repo from './Repo';
-import useSearchHandlers from './useSearchHandlers'
-import Status from './Status';
-import ReposPage from './ReposPage';
+import Search from './components/Search';
+import useSearchHandlers from './hooks/useSearchHandlers'
+import Status from './components/Status';
+import ReposPage from './components/ReposPage';
 
 function App() {
 

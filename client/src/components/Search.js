@@ -7,7 +7,6 @@ const Search = (props) => {
       <label className='search__label' htmlFor='search-input'>
         <input placeholder="Search for..." type='text' value={props.value} onChange={props.onChange} />
           <input onClick={props.onSubmit} type="submit" value="SEARCH" />
-        {/* </i> */}
       </label>
     </form>
   )
