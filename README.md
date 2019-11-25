@@ -24,7 +24,7 @@ You will also see any lint errors in the console.
 3. Separate React app into `hooks`, `reducers`, `components` folder so that it will be easier to add more features in the future
 4. SASS for css styling
 5. When I developed this app I ran into some issues handling the pagination from github api because they only return the maximum 100 items per page. I used the recursive function to get all the items.
-6. TODO: I realize I should use useMem/useCallback to make use of cashed results to save some time. 
+6. TODO: I realize I should use useMem/useCallback to make use of cashed results to save some time. us
 And I also should add formal testing for it.
 Fuzzy Search for username suggestions
 7. I understand there may be some bugs and there would be always a better way to construct the app from the beginning. I appreciate all the feedback. Thanks.
