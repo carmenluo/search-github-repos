@@ -14,6 +14,17 @@ const reducer = (state, action) => {
       return {...state, loading: action.loading, repos: action.res, searchValue: ''}
     case SET_ERROR_MESSAGE:
       return {...state, loading: action.loading, errorMessage: action.errorMessage,searchValue: ''}
-  
+    case SET_PAGE:
+      let currentRepos = state.repos.slice()
+      let startIndex = state.reposPerPage * action.page;
+      let endIndex = startIndex + state.reposPerPage;
+      console.log(`start:
+      ${startIndex}
+      end : ${endIndex}`)
+      currentRepos = currentRepos.slice(startIndex, endIndex)
+      console.log(`current repo:
+      ${currentRepos}`)
+      return {...state, currentRepos: currentRepos}
+    }
 }
-export { reducer, SET_SEARCH_VALUE, SUBMIT_SEARCH, SET_REPOS, SET_ERROR_MESSAGE }
+export { reducer, SET_SEARCH_VALUE, SUBMIT_SEARCH, SET_REPOS, SET_ERROR_MESSAGE,SET_PAGE }
