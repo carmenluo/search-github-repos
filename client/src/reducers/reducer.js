@@ -11,7 +11,8 @@ const reducer = (state, action) => {
       return {
         ...state, 
         loading: action.loading,
-        errorMessage: action.errorMessage
+        errorMessage: action.errorMessage,
+        repos: action.repos
       }
     case SET_REPOS:
       let repos = state.repos.concat(action.res)
@@ -20,7 +21,6 @@ const reducer = (state, action) => {
         loading: action.loading,
         repos: repos,
         userName: action.userName,
-        searchValue: ''
       }
     case SET_ERROR_MESSAGE:
       return {...state, loading: action.loading, errorMessage: action.errorMessage,searchValue: ''}

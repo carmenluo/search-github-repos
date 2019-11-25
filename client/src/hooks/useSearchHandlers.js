@@ -1,4 +1,4 @@
-import { useReducer } from 'react'
+import { useReducer, userEffect } from 'react'
 import { reducer, SET_SEARCH_VALUE, SUBMIT_SEARCH, SET_REPOS, SET_ERROR_MESSAGE, SET_PAGE } from '../reducers/reducer'
 import axios from 'axios'
 const initState = {
@@ -29,6 +29,7 @@ const useSearchHandlers = () => {
           if (res.data.length === 0) {
             dispatch({ type: SET_REPOS, res: res.data,loading:false, userName: state.searchValue })
             dispatch({ type: SET_PAGE, page: state.currentPageNo })
+            dispatch({ type: SET_SEARCH_VALUE, searchValue: '' })
           } else {
             githubPages++;
             retrievedRepo(url, repos, resolve, reject, githubPages)
@@ -44,7 +45,7 @@ const useSearchHandlers = () => {
   // 5. TODO: github api limit 100 items per page. Need to get all repos
   const onSubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: SUBMIT_SEARCH, loading: true, errorMessage: '' })
+    dispatch({ type: SUBMIT_SEARCH, loading: true, errorMessage: '', repos:[] })
     //init the first-time search for that name
     axios.get(`https://api.github.com/search/users?q=user:${state.searchValue}`)
       .then((res) => {
@@ -66,6 +67,9 @@ const useSearchHandlers = () => {
     e.preventDefault();
     dispatch({ type: SET_PAGE, page: page })
   }
+  // userEffect(() => {
+  //   dispatch({type: RESET_INPUT})
+  // })
   return (
     {
       state,
