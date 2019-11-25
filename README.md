@@ -8,6 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Seperating code into client folder to maintain structures
 In the project directory, you can run:
 
+### `yarn install`
 ### `cd client`
 ### `yarn start`
 
